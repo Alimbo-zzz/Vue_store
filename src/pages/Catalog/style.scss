@@ -1,0 +1,60 @@
+.catalog {
+	padding: 2em 0;
+
+	&__title {
+		font-size: 3em;
+		font-weight: bold;
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+
+	&__controlls {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+	}
+
+	button[data-btn] {
+		background: $gray;
+		border: none;
+		width: 3em;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: 0.15s;
+
+		&:active {
+			transform: scale(0.9);
+		}
+
+		&:disabled {
+			pointer-events: none;
+			opacity: 0.3;
+		}
+	}
+
+	[data-controlls] {
+		font-size: 1.1em;
+		color: $gray;
+		display: flex;
+		line-height: 0.5;
+		align-items: flex-end;
+		gap: 0.3em;
+		font-family: Arial;
+	}
+
+	[data-controlls='active'] {
+		font-size: 1.6em;
+		color: $black;
+		font-weight: bold;
+	}
+
+}
